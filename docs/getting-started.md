@@ -1,0 +1,85 @@
+---
+sidebar_position: 2
+---
+
+# Getting Started
+
+Learn how to install and set up MyCoder for your development environment.
+
+## Prerequisites
+
+- OS: MacOS, Windows, or Linux
+- Node.js >= 20.0.0
+- An API key for your chosen AI provider
+
+## Installation
+
+```bash
+# Install globally
+npm install -g mycoder
+
+# Or use with npx
+npx mycoder
+```
+
+## Platform-Specific Setup
+
+MyCoder works on all major operating systems. Select your platform for specific setup instructions:
+
+- [Windows Setup](./getting-started/windows.md)
+- [macOS Setup](./getting-started/macos.md)
+- [Linux Setup](./getting-started/linux.md)
+
+## Setting Up Your API Key
+
+Before using MyCoder with a specific provider, you need to provide the appropriate API key:
+
+1. Set an environment variable:
+
+   ```bash
+   export ANTHROPIC_API_KEY=your-api-key
+   # or
+   export OPENAI_API_KEY=your-api-key
+   # or
+   export MISTRAL_API_KEY=your-api-key
+   # or
+   export XAI_API_KEY=your-api-key
+   ```
+
+2. Create a `.env` file in your working directory with the appropriate key:
+   ```
+   ANTHROPIC_API_KEY=your-api-key
+   ```
+
+You can obtain API keys from the respective provider websites.
+
+## Supported AI Providers
+
+MyCoder supports multiple AI providers:
+
+| Provider   | Environment Variable | Models                               |
+| ---------- | -------------------- | ------------------------------------ |
+| Anthropic  | `ANTHROPIC_API_KEY`  | claude-3-opus, claude-3-sonnet, etc. |
+| OpenAI     | `OPENAI_API_KEY`     | gpt-4o, o3-mini, etc.                |
+| Mistral AI | `MISTRAL_API_KEY`    | mistral-large, mistral-medium, etc.  |
+| xAI/Grok   | `XAI_API_KEY`        | grok-1                               |
+| Ollama     | N/A (local)          | Various local models                 |
+
+You can specify which provider and model to use with the `--modelProvider` and `--modelName` options:
+
+```bash
+mycoder --modelProvider openai --modelName gpt-4o "Your prompt here"
+```
+
+Or set them as defaults in your configuration:
+
+```bash
+mycoder config set modelProvider openai
+mycoder config set modelName gpt-4o
+```
+
+## Next Steps
+
+- Learn about [basic usage](./usage.md)
+- Explore the [configuration options](./usage/configuration.md)
+- Join our [Discord community](https://discord.gg/5K6TYrHGHt)
