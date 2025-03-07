@@ -12,7 +12,11 @@ MyCoder can help with various DevOps tasks, including setting up CI/CD pipelines
 ### Example: Setting Up GitHub Actions Workflows
 
 ```
-Can you implement the recommendations 2 and 3 from issue #44. You can look at the CI Github Actions workflow in ../mycoder-websites/.github as guide to setting up a similar CI action that validates the build and runs lint, etc for this repo.
+Can you implement the recommendations 2 and 3 from
+issue #44. You can look at the CI Github Actions
+workflow in ../mycoder-websites/.github as guide
+to setting up a similar CI action that validates
+the build and runs lint, etc for this repo.
 ```
 
 **Why this works well:**
@@ -27,7 +31,14 @@ Can you implement the recommendations 2 and 3 from issue #44. You can look at th
 ### Example: Converting from npm to pnpm
 
 ```
-I think that the github action workflows and maybe the docker build are still making assumptions about using npm rather than pnpm. Can you look at ../Business/drivecore/mycoder-websites as an example of docker files that use pnpm and also github action workflows that use pnpm and adapt the current project to use that style. Please create a github issue and then once the task is complete please submit a PR.
+I think that the github action workflows and maybe
+the docker build are still making assumptions about
+using npm rather than pnpm. Can you look at
+../Business/drivecore/mycoder-websites as an example
+of docker files that use pnpm and also github action
+workflows that use pnpm and adapt the current project
+to use that style. Please create a github issue and
+then once the task is complete please submit a PR.
 ```
 
 **Why this works well:**
@@ -42,9 +53,19 @@ I think that the github action workflows and maybe the docker build are still ma
 ### Example: Investigating Mono-Repo Build Issues
 
 ```
-When I run this command \"pnpm --filter @web3dsurvey/api-server build\" in the current directory, it runs into an error because one of the packages in this mono-repo upon which @web3dsurvey/api-server is dependent is not built, but I am confused because I thought that pnpm would automatically build packages that are depended upon.
+When I run this command \"pnpm --filter
+@web3dsurvey/api-server build\" in the current directory,
+it runs into an error because one of the packages in
+this mono-repo upon which @web3dsurvey/api-server is
+dependent is not built, but I am confused because I
+thought that pnpm would automatically build packages
+that are depended upon.
 
-I must have some part of the configuration of the current project incorrect right? Can you create an issue for this and then investigate. You can use the command \"pnpm clean:dist\" to reset the package to its non-built state.
+I must have some part of the configuration of the
+current project incorrect right? Can you create an
+issue for this and then investigate. You can use
+the command \"pnpm clean:dist\" to reset the package 
+to its non-built state.
 ```
 
 **Why this works well:**
@@ -60,7 +81,11 @@ I must have some part of the configuration of the current project incorrect righ
 ### Example: Debugging GitHub Actions
 
 ```
-It seems that the latest GitHub action failed, can you investigate it and make a GitHub issue with the problem and then push a PR that fixes the issue? Please wait for the new GitHub action to complete before declaring success.
+It seems that the latest GitHub action failed, can you
+investigate it and make a GitHub issue with the problem
+and then push a PR that fixes the issue? Please wait
+for the new GitHub action to complete before declaring
+success.
 ```
 
 **Why this works well:**

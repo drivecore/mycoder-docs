@@ -12,7 +12,13 @@ MyCoder is excellent at reviewing code, analyzing PRs, and providing feedback on
 ### Example: Reviewing a PR for Potential Duplication
 
 ```
-In the current PR #45, which fixes issue #44 and it is also currently checked out as the current branch, there isn't duplication of the checks are there? In your writeup you say that \"added pre-push hook with the same validation\". It seems that we have both a pre-commit hook and a pre-push hook that do the same thing? Won't that slow things down?
+In the current PR #45, which fixes issue #44 and it
+is also currently checked out as the current branch,
+there isn't duplication of the checks are there? In
+your writeup you say that \"added pre-push hook with
+the same validation\". It seems that we have both a
+pre-commit hook and a pre-push hook that do the same
+thing? Won't that slow things down?
 ```
 
 **Why this works well:**
@@ -28,7 +34,14 @@ In the current PR #45, which fixes issue #44 and it is also currently checked ou
 ### Example: Reviewing Package Manager Configuration
 
 ```
-I think that the github action workflows and maybe the docker build are still making assumptions about using npm rather than pnpm. Can you look at ../Business/drivecore/mycoder-websites as an example of docker files that use pnpm and also github action workflows that use pnpm and adapt the current project to use that style. Please create a github issue and then once the task is complete please submit a PR.
+I think that the github action workflows and maybe the
+docker build are still making assumptions about using
+npm rather than pnpm. Can you look at
+../Business/drivecore/mycoder-websites as an example
+of docker files that use pnpm and also github action
+workflows that use pnpm and adapt the current project 
+yo use that style. Please create a github issue and
+then once the task is complete please submit a PR.
 ```
 
 **Why this works well:**
@@ -44,7 +57,10 @@ I think that the github action workflows and maybe the docker build are still ma
 ### Example: Requesting UI Improvements
 
 ```
-Can you make the blue that is used for the links to be a little more dark-grey blue? And can you remove the underline from links by default? Please create a Github issue for this and a PR.
+Can you make the blue that is used for the links to
+be a little more dark-grey blue? And can you remove
+the underline from links by default? Please create
+a Github issue for this and a PR.
 ```
 
 **Why this works well:**
