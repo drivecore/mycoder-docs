@@ -55,51 +55,9 @@ The profiling output shows:
 - **Absolute times**: The total elapsed time since the start of the process
 - **Relative times** (in parentheses): The time taken by each specific step
 
-## Key Performance Metrics
-
-The most important metrics to watch are:
-
-1. **Module initialization**: Time to load and initialize Node.js modules
-2. **After imports**: Time to complete all JavaScript imports
-3. **After yargs setup**: Time to set up the command-line interface
-4. **Total startup time**: Overall time from start to when MyCoder is ready to run
-
-## Diagnosing Performance Issues
-
-If you notice slow startup times, here are some common causes and solutions:
-
-### Slow Module Loading
-
-If "Module initialization" or "After imports" takes a long time:
-- Check for slow disk I/O
-- Consider using an SSD if you're on a mechanical hard drive
-- Verify you're not running many background processes
-
-### Slow Command-Line Parsing
-
-If "After yargs setup" takes a long time:
-- Check if you have many environment variables
-- Verify your shell initialization files aren't slowing things down
-
-### Operating System Differences
-
-Performance can vary significantly between operating systems:
-- Windows may be slower due to different filesystem performance
-- WSL (Windows Subsystem for Linux) may have overhead
-- macOS with Apple Silicon tends to be fastest for Node.js applications
-
-## Improving Performance
-
-Some tips for improving MyCoder's startup performance:
-
-1. **Use Node.js 20+**: Later versions of Node.js have better startup performance
-2. **Minimize environment variables**: Having many environment variables can slow down process startup
-3. **SSD storage**: Using an SSD can significantly improve module loading times
-4. **Clean npm cache**: Occasionally run `npm cache clean --force` to clear cached packages
-
 ## Reporting Performance Issues
 
-If you encounter significant performance problems that profiling doesn't help resolve, please report them on our [Discord server](https://discord.gg/5K6TYrHGHt) with:
+If you encounter significant performance problems, please report them on our [Discord server](https://discord.gg/5K6TYrHGHt) with:
 
 1. Your operating system and version
 2. Node.js version (`node --version`)
