@@ -50,8 +50,8 @@ MyCoder can help with a wide variety of development tasks:
 
 To start using MyCoder, check out the following sections:
 
-- [Installation and setup](./getting-started.md)
-- [Basic usage and commands](./usage.md)
+- [Installation and setup](./getting-started/index.mdx)
+- [Basic usage and commands](./usage/index.mdx)
 - [Configuration options](./usage/configuration.md)
 
 ## Community
