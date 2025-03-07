@@ -16,13 +16,11 @@ This guide will help you set up MyCoder on Linux.
    
    NVM is the preferred way to install Node.js as it allows for easy version management and avoids permission issues:
    
+   Visit the [NVM GitHub repository](https://github.com/nvm-sh/nvm) and follow the official installation instructions.
+   
+   After installing NVM:
+   
    ```bash
-   # Install NVM
-   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-   
-   # Reload shell configuration
-   source ~/.bashrc  # or source ~/.zshrc
-   
    # Install latest LTS version of Node.js
    nvm install --lts
    
@@ -54,31 +52,9 @@ This guide will help you set up MyCoder on Linux.
 
 3. **GitHub CLI**: Command-line tool for interacting with GitHub
    
-   **Ubuntu/Debian:**
-   ```bash
-   # Add GitHub CLI repository
-   curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
-   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+   Visit the [GitHub CLI website](https://cli.github.com/) and follow the installation instructions for your Linux distribution.
    
-   # Update package lists and install
-   sudo apt update
-   sudo apt install gh
-   ```
-   
-   **Fedora/RHEL:**
-   ```bash
-   # Install from DNF repository
-   sudo dnf install 'dnf-command(config-manager)'
-   sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
-   sudo dnf install gh
-   ```
-   
-   **Arch Linux:**
-   ```bash
-   sudo pacman -S github-cli
-   ```
-   
-   **Verify installation and authenticate:**
+   **After installation, verify and authenticate:**
    ```bash
    # Verify installation
    gh --version
