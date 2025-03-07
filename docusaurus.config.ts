@@ -69,8 +69,8 @@ const config: Config = {
           beforeDefaultRemarkPlugins: [],
           beforeDefaultRehypePlugins: [],
           truncateMarker: /<!-- truncate -->/,
-          // Add custom transform function to use shortTitle if available
-          blogSidebarItemComponent: require.resolve('./src/components/BlogSidebarItem'),
+          // Custom sidebar item component is currently causing issues with the build
+          // blogSidebarItemComponent: require.resolve('./src/components/BlogSidebarItem'),
         },
         theme: {
           customCss: './src/css/custom.css',
