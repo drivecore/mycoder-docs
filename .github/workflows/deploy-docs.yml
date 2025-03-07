@@ -39,8 +39,8 @@ jobs:
 
       - name: Build and push Docker container
         run: |
-          docker build -t $REGISTRY/$PROJECT_ID/cloud-run-deployments/$SERVICE_NAME:${{ github.sha }} .
-          docker push $REGISTRY/$PROJECT_ID/cloud-run-deployments/$SERVICE_NAME:${{ github.sha }}
+          docker build -t ${{ env.REGISTRY }}/${{ env.PROJECT_ID }}/shared-docker-registry/${{ env.SERVICE_NAME }}:${{ github.sha }}:${{ github.sha }} .
+          docker push ${{ env.REGISTRY }}/${{ env.PROJECT_ID }}/shared-docker-registry/${{ env.SERVICE_NAME }}:${{ github.sha }}:${{ github.sha }}
 
       - name: Deploy to Cloud Run
         id: deploy
@@ -48,7 +48,7 @@ jobs:
         with:
           service: ${{ env.SERVICE_NAME }}
           region: ${{ env.REGION }}
-          image: ${{ env.REGISTRY }}/${{ env.PROJECT_ID }}/cloud-run-deployments/${{ env.SERVICE_NAME }}:${{ github.sha }}
+          image: ${{ env.REGISTRY }}/${{ env.PROJECT_ID }}/shared-docker-registry/${{ env.SERVICE_NAME }}:${{ github.sha }}
           flags: '--allow-unauthenticated'
 
       - name: Show Output
