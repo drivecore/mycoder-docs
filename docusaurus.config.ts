@@ -23,6 +23,14 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
+  // Disable dark mode
+  themeConfig: {
+    colorMode: {
+      disableSwitch: true,
+      defaultMode: 'light',
+    },
+  },
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -84,10 +92,6 @@ const config: Config = {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'MyCoder Docs',
-      logo: {
-        alt: 'MyCoder Logo',
-        src: 'img/logo.svg',
-      },
       items: [
         {
           type: 'docSidebar',
@@ -164,7 +168,6 @@ const config: Config = {
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
 };

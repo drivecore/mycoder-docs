@@ -8,7 +8,23 @@ This guide will help you set up MyCoder on macOS.
 
 ## Prerequisites
 
-1. **Node.js**: Install Node.js version 20.0.0 or higher
+1. **Homebrew**: The recommended package manager for macOS
+   
+   Homebrew makes it easy to install and manage development tools on macOS. Installing it first will simplify the rest of the setup process.
+   
+   ```bash
+   # Install Homebrew
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   
+   # Make sure Homebrew is in your PATH
+   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+   eval "$(/opt/homebrew/bin/brew shellenv)"
+   
+   # Verify installation
+   brew --version
+   ```
+
+2. **Node.js**: Install Node.js version 20.0.0 or higher
    
    > **⚠️ Important:** MyCoder requires Node.js runtime to function properly.
    
@@ -17,11 +33,19 @@ This guide will help you set up MyCoder on macOS.
    NVM is the preferred way to install Node.js as it allows for easy version management and avoids permission issues:
    
    ```bash
-   # Install NVM
-   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+   # Install NVM using Homebrew
+   brew install nvm
+   
+   # Create NVM directory
+   mkdir ~/.nvm
+   
+   # Add NVM configuration to your shell profile
+   echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
+   echo '[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh"' >> ~/.zshrc
+   echo '[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"' >> ~/.zshrc
    
    # Reload shell configuration
-   source ~/.zshrc  # or source ~/.bash_profile for older macOS versions
+   source ~/.zshrc
    
    # Install latest LTS version of Node.js
    nvm install --lts
@@ -33,7 +57,7 @@ This guide will help you set up MyCoder on macOS.
    node --version
    ```
    
-   **Alternative: Using Homebrew:**
+   **Alternative: Direct Homebrew installation:**
    ```bash
    brew install node
    ```
@@ -43,9 +67,34 @@ This guide will help you set up MyCoder on macOS.
    
    Verify installation with `node --version`
 
-2. **Git**: macOS typically comes with Git pre-installed
-   - Verify with `git --version`
-   - If not installed: `brew install git`
+3. **Git**: Version control system
+   ```bash
+   # Install Git using Homebrew
+   brew install git
+   
+   # Verify installation
+   git --version
+   ```
+
+4. **GitHub CLI**: Command-line tool for interacting with GitHub
+   ```bash
+   # Install GitHub CLI using Homebrew
+   brew install gh
+   
+   # Verify installation
+   gh --version
+   
+   # Authenticate with GitHub
+   gh auth login
+   ```
+   
+   The GitHub CLI makes it easy to:
+   - Create and manage issues
+   - Create and review pull requests
+   - Clone repositories
+   - Manage GitHub workflows
+   
+   This is especially useful if you plan to contribute to MyCoder or related projects.
 
 ## Installation
 
