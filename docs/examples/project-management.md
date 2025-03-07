@@ -1,9 +1,9 @@
 ---
-title: Project Management Examples
+title: Project Management
 description: Using MyCoder for planning, issue creation, and project organization
 ---
 
-# Project Management Examples
+# Project Management
 
 MyCoder excels at helping with project management tasks such as creating issues, planning work, and organizing projects. This page provides real-world examples of effective prompts for these scenarios.
 

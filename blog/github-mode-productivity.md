@@ -1,11 +1,14 @@
 ---
 title: GitHub Mode as a Productivity Multiplier
-description: How using GitHub as external memory transforms MyCoder into a true team member
+shortTitle: GitHub Mode Productivity
+date: 2025-03-07
+authors: [mycoder_team]
+tags: [github, productivity, workflow]
 ---
 
-# GitHub Mode as a Productivity Multiplier
-
 One of the most powerful aspects of MyCoder is its ability to use GitHub as a persistent, external memory store. This approach fundamentally transforms how you can interact with an AI coding assistant, turning it from a transient helper into a fully integrated team member with long-term memory.
+
+<!-- truncate -->
 
 ## The Productivity Breakthrough
 

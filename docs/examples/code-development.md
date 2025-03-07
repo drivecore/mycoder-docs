@@ -1,9 +1,9 @@
 ---
-title: Code Development Examples
+title: Code Development
 description: Examples of implementing features, fixing bugs, and writing tests
 ---
 
-# Code Development Examples
+# Code Development
 
 MyCoder can assist with a wide range of code development tasks, from implementing new features to fixing bugs and improving existing code. This page showcases real-world examples of effective prompts for these scenarios.
 

@@ -1,9 +1,9 @@
 ---
-title: Code Review and Analysis Examples
+title: Code Review
 description: Using MyCoder to review PRs, analyze code quality, and suggest improvements
 ---
 
-# Code Review and Analysis Examples
+# Code Review
 
 MyCoder is excellent at reviewing code, analyzing PRs, and providing feedback on potential improvements. This page showcases real-world examples of effective prompts for these scenarios.
 

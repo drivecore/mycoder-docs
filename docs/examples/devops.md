@@ -1,9 +1,9 @@
 ---
-title: DevOps and Configuration Examples
+title: DevOps
 description: Setting up CI/CD, Docker configurations, and environment management
 ---
 
-# DevOps and Configuration Examples
+# DevOps
 
 MyCoder can help with various DevOps tasks, including setting up CI/CD pipelines, configuring Docker, and managing build environments. This page showcases real-world examples of effective prompts for these scenarios.
 
