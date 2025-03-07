@@ -9,7 +9,31 @@ This guide will help you set up MyCoder on Windows.
 ## Prerequisites
 
 1. **Node.js**: Install Node.js version 20.0.0 or higher
+   
+   > **⚠️ Important:** MyCoder requires Node.js runtime to function properly.
+   
+   **Recommended: Using NVM for Windows (Node Version Manager)**
+   
+   NVM for Windows is the preferred way to install Node.js as it allows for easy version management:
+   
+   ```
+   # Download and install NVM for Windows
+   # Visit: https://github.com/coreybutler/nvm-windows/releases
+   # Download the nvm-setup.exe file from the latest release
+   
+   # After installation, open a new Command Prompt and install Node.js
+   nvm install lts
+   
+   # Set it as default
+   nvm use lts
+   
+   # Verify installation
+   node --version
+   ```
+   
+   **Alternative: Direct download**
    - Download from [nodejs.org](https://nodejs.org/)
+   - Run the installer and follow the prompts
    - Verify installation with `node --version`
 
 2. **Git**: Install Git for Windows

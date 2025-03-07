@@ -21,7 +21,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            Get Started with MyCoder
           </Link>
         </div>
       </div>
@@ -29,15 +29,52 @@ function HomepageHeader() {
   );
 }
 
+function HomepageQuickStart() {
+  return (
+    <section className={styles.quickStart}>
+      <div className="container">
+        <div className="row">
+          <div className="col col--6">
+            <Heading as="h2">Quick Start</Heading>
+            <p>
+              Get up and running with MyCoder in minutes. MyCoder is an AI-powered coding assistant
+              that helps you write better code faster.
+            </p>
+            <pre className={styles.codeBlock}>
+              <code>
+                # Install MyCoder globally<br />
+                npm install -g mycoder<br /><br />
+                # Use MyCoder with a prompt<br />
+                mycoder "Create a React component that displays a counter"
+              </code>
+            </pre>
+          </div>
+          <div className="col col--6">
+            <Heading as="h2">Popular Documentation</Heading>
+            <ul className={styles.docsLinks}>
+              <li><Link to="/docs/getting-started/windows">Windows Setup</Link></li>
+              <li><Link to="/docs/getting-started/macos">macOS Setup</Link></li>
+              <li><Link to="/docs/getting-started/linux">Linux Setup</Link></li>
+              <li><Link to="/docs/usage">Usage Guide</Link></li>
+              <li><Link to="/blog">Latest Updates</Link></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title} - AI-Powered Coding Assistant`}
+      description="MyCoder is an AI-powered coding assistant that helps developers write better code faster with context-aware code generation.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <HomepageQuickStart />
       </main>
     </Layout>
   );
