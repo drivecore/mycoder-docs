@@ -71,6 +71,20 @@ We welcome contributions to improve the documentation:
 5. Push to the branch (`git push origin feature/amazing-improvement`)
 6. Open a Pull Request
 
+### Pre-commit Hooks
+
+This repository uses Husky to run pre-commit hooks that ensure code quality. When you commit changes, the following checks will run automatically:
+
+- Building the project to ensure there are no build errors or warnings
+
+If the build fails, your commit will be aborted. Fix the issues and try committing again.
+
+To manually run the checks:
+
+```bash
+npm run pre-commit-check
+```
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
