@@ -53,7 +53,10 @@ MyCoder can integrate with your development pipeline:
 ### Example 1: Asynchronous Code Review
 
 ```
-In PR #45, which fixes issue #44, you mentioned adding a pre-push hook with the same validation as the pre-commit hook. Can you confirm whether this introduces redundant checks that might slow down development? If so, we should optimize it.
+In PR #45, which fixes issue #44, you mentioned adding a pre-push
+hook with the same validation as the pre-commit hook. Can you
+confirm whether this introduces redundant checks that might
+slow down development? If so, we should optimize it.
 ```
 
 **Why this works well:**
@@ -64,7 +67,9 @@ In PR #45, which fixes issue #44, you mentioned adding a pre-push hook with the 
 ### Example 2: Batch Processing Multiple Issues
 
 ```
-Can you implement GitHub issues #31 and #30 together in a single PR? This will ensure related changes are reviewed and merged simultaneously. Once done, submit the PR and link both issues.
+Can you implement GitHub issues #31 and #30 together in a single
+PR? This will ensure related changes are reviewed and merged
+simultaneously. Once done, submit the PR and link both issues.
 ```
 
 **Why this works well:**
@@ -75,7 +80,12 @@ Can you implement GitHub issues #31 and #30 together in a single PR? This will e
 ### Example 3: Autonomous Debugging
 
 ```
-You just created PR #34, fixing issues #30 and #31. However, the CI is failing. Check GitHub Actions to diagnose the issue and determine if your recent repository reorganization has affected workflows or Docker configurations. If unrelated to the fixes, create a separate GitHub issue and submit an independent PR to address it.
+You just created PR #34, fixing issues #30 and #31. However,
+the CI is failing. Check GitHub Actions to diagnose the issue
+and determine if your recent repository reorganization has
+affected workflows or Docker configurations. If unrelated to
+the fixes, create a separate GitHub issue and submit an
+independent PR to address it.
 ```
 
 **Why this works well:**
