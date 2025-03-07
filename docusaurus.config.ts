@@ -56,6 +56,21 @@ const config: Config = {
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
+          // Use short titles in blog sidebar
+          blogSidebarTitle: 'Recent Posts',
+          blogSidebarCount: 10,
+          blogTitle: 'MyCoder Blog',
+          postsPerPage: 5,
+          blogListComponent: '@theme/BlogListPage',
+          blogPostComponent: '@theme/BlogPostPage',
+          blogTagsListComponent: '@theme/BlogTagsListPage',
+          blogTagsPostsComponent: '@theme/BlogTagsPostsPage',
+          rehypePlugins: [],
+          beforeDefaultRemarkPlugins: [],
+          beforeDefaultRehypePlugins: [],
+          truncateMarker: /<!-- truncate -->/,
+          // Add custom transform function to use shortTitle if available
+          blogSidebarItemComponent: require.resolve('./src/components/BlogSidebarItem'),
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -122,7 +137,7 @@ const config: Config = {
               href: 'https://discord.gg/5K6TYrHGHt',
             },
             {
-              label: 'Twitter',
+              label: 'X (Twitter)',
               href: 'https://twitter.com/mycoderAI',
             },
           ],
@@ -145,7 +160,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} DriveCore, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://drivecore.ai">DriveCore, Inc.</a> Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

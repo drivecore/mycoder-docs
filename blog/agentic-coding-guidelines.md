@@ -1,6 +1,6 @@
 ---
 title: Best Practices for Efficient Agentic Coding
-subTitle: Agentic Coding Best Practices
+shortTitle: Agentic Coding Best Practices
 date: 2025-03-06
 authors: [ben]
 tags: [ai, coding]

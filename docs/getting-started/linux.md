@@ -9,17 +9,43 @@ This guide will help you set up MyCoder on Linux.
 ## Prerequisites
 
 1. **Node.js**: Install Node.js version 20.0.0 or higher
-   - Using package manager (Ubuntu/Debian):
-     ```bash
-     curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-     sudo apt-get install -y nodejs
-     ```
-   - Using package manager (Fedora/RHEL):
-     ```bash
-     curl -fsSL https://rpm.nodesource.com/setup_20.x | sudo bash -
-     sudo yum install -y nodejs
-     ```
-   - Verify installation with `node --version`
+   
+   > **⚠️ Important:** MyCoder requires Node.js runtime to function properly.
+   
+   **Recommended: Using NVM (Node Version Manager)**
+   
+   NVM is the preferred way to install Node.js as it allows for easy version management and avoids permission issues:
+   
+   ```bash
+   # Install NVM
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+   
+   # Reload shell configuration
+   source ~/.bashrc  # or source ~/.zshrc
+   
+   # Install latest LTS version of Node.js
+   nvm install --lts
+   
+   # Set it as default
+   nvm use --lts
+   
+   # Verify installation
+   node --version
+   ```
+   
+   **Alternative: Using package manager (Ubuntu/Debian):**
+   ```bash
+   curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+   sudo apt-get install -y nodejs
+   ```
+   
+   **Alternative: Using package manager (Fedora/RHEL):**
+   ```bash
+   curl -fsSL https://rpm.nodesource.com/setup_20.x | sudo bash -
+   sudo yum install -y nodejs
+   ```
+   
+   Verify installation with `node --version`
 
 2. **Git**: Install Git if not already available
    - Ubuntu/Debian: `sudo apt-get install git`
