@@ -2,6 +2,7 @@
   "name": "mycoder-docs",
   "version": "0.0.0",
   "private": true,
+  "packageManager": "pnpm@10.2.1",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -15,7 +16,7 @@
     "typecheck": "tsc",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prepare": "husky",
-    "pre-commit-check": "npm run build"
+    "pre-commit-check": "pnpm lint && pnpm build"
   },
   "dependencies": {
     "@docusaurus/core": "3.7.0",
