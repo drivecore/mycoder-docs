@@ -20,28 +20,26 @@ const FeatureList: FeatureItem[] = [
     Svg: MountainSvg,
     description: (
       <>
-        MyCoder leverages advanced AI models to understand your requirements
+        MyCoder leverages Claude 3.7 Sonnet to understand your requirements
         and generate high-quality code solutions in multiple programming languages.
       </>
     ),
   },
   {
-    title: 'Context-Aware Responses',
+    title: 'Github Integration',
     Svg: TreeSvg,
     description: (
       <>
-        MyCoder understands your project structure and existing code, providing
-        solutions that integrate seamlessly with your codebase.
+        MyCoder supports &quot;Github Mode&quot; where it can create issues, add comments, review PRs, make PRs and even investigate Github Action failures.
       </>
     ),
   },
   {
-    title: 'Built for Developers',
+    title: 'Open Source & Self-Improving',
     Svg: ReactSvg,
     description: (
       <>
-        Designed with developer workflows in mind, MyCoder integrates with your
-        terminal, code editor, and development environment.
+        MyCoder is open source and available on Github.  MyCoder is being developed by itself in large part.
       </>
     ),
   },
