@@ -47,3 +47,18 @@ case-study:
   label: Case Study
   permalink: /case-study
   description: Real-world examples and case studies
+
+github:
+  label: GitHub
+  permalink: /github
+  description: Content related to GitHub features and workflows
+
+productivity:
+  label: Productivity
+  permalink: /productivity
+  description: Tips and techniques for improving productivity
+
+workflow:
+  label: Workflow
+  permalink: /workflow
+  description: Development workflows and process improvements
