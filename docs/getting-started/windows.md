@@ -40,6 +40,37 @@ This guide will help you set up MyCoder on Windows.
    - Download from [git-scm.com](https://git-scm.com/download/win)
    - Verify installation with `git --version`
 
+3. **GitHub CLI**: Command-line tool for interacting with GitHub
+   - Download from [cli.github.com](https://cli.github.com/)
+   - Run the installer and follow the prompts
+   - Verify installation with `gh --version`
+   - Authenticate with GitHub:
+     ```
+     gh auth login
+     ```
+   
+   The GitHub CLI makes it easy to:
+   - Create and manage issues
+   - Create and review pull requests
+   - Clone repositories
+   - Manage GitHub workflows
+   
+   This is especially useful if you plan to contribute to MyCoder or related projects.
+   
+   **Enable GitHub Mode in MyCoder**:
+   
+   After installing the GitHub CLI, enable GitHub mode in MyCoder for enhanced GitHub integration:
+   
+   ```
+   # Enable GitHub mode
+   mycoder config set githubMode true
+   
+   # Verify configuration
+   mycoder config get githubMode
+   ```
+   
+   With GitHub mode enabled, MyCoder can create issues, branches, and pull requests directly through the GitHub CLI.
+
 ## Installation
 
 Install MyCoder globally using npm:

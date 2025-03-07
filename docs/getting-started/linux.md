@@ -52,6 +52,63 @@ This guide will help you set up MyCoder on Linux.
    - Fedora/RHEL: `sudo yum install git`
    - Verify with `git --version`
 
+3. **GitHub CLI**: Command-line tool for interacting with GitHub
+   
+   **Ubuntu/Debian:**
+   ```bash
+   # Add GitHub CLI repository
+   curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+   
+   # Update package lists and install
+   sudo apt update
+   sudo apt install gh
+   ```
+   
+   **Fedora/RHEL:**
+   ```bash
+   # Install from DNF repository
+   sudo dnf install 'dnf-command(config-manager)'
+   sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+   sudo dnf install gh
+   ```
+   
+   **Arch Linux:**
+   ```bash
+   sudo pacman -S github-cli
+   ```
+   
+   **Verify installation and authenticate:**
+   ```bash
+   # Verify installation
+   gh --version
+   
+   # Authenticate with GitHub
+   gh auth login
+   ```
+   
+   The GitHub CLI makes it easy to:
+   - Create and manage issues
+   - Create and review pull requests
+   - Clone repositories
+   - Manage GitHub workflows
+   
+   This is especially useful if you plan to contribute to MyCoder or related projects.
+   
+   **Enable GitHub Mode in MyCoder**:
+   
+   After installing the GitHub CLI, enable GitHub mode in MyCoder for enhanced GitHub integration:
+   
+   ```bash
+   # Enable GitHub mode
+   mycoder config set githubMode true
+   
+   # Verify configuration
+   mycoder config get githubMode
+   ```
+   
+   With GitHub mode enabled, MyCoder can create issues, branches, and pull requests directly through the GitHub CLI.
+
 ## Installation
 
 Install MyCoder globally using npm:
