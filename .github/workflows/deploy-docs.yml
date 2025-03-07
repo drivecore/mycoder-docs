@@ -37,10 +37,13 @@ jobs:
         run: |
           gcloud auth configure-docker $REGISTRY --quiet
 
+      - name: Set image path
+        run: echo "IMAGE_PATH=$REGISTRY/$PROJECT_ID/shared-docker-registry/$SERVICE_NAME:${{ github.sha }}" >> $GITHUB_ENV
+
       - name: Build and push Docker container
         run: |
-          docker build -t ${{ env.REGISTRY }}/${{ env.PROJECT_ID }}/shared-docker-registry/${{ env.SERVICE_NAME }}:${{ github.sha }}:${{ github.sha }} .
-          docker push ${{ env.REGISTRY }}/${{ env.PROJECT_ID }}/shared-docker-registry/${{ env.SERVICE_NAME }}:${{ github.sha }}:${{ github.sha }}
+          docker build -t ${{ env.IMAGE_PATH }} .
+          docker push ${{ env.IMAGE_PATH }}
 
       - name: Deploy to Cloud Run
         id: deploy
@@ -48,7 +51,7 @@ jobs:
         with:
           service: ${{ env.SERVICE_NAME }}
           region: ${{ env.REGION }}
-          image: ${{ env.REGISTRY }}/${{ env.PROJECT_ID }}/shared-docker-registry/${{ env.SERVICE_NAME }}:${{ github.sha }}
+          image: ${{ env.IMAGE_PATH }}
           flags: '--allow-unauthenticated'
 
       - name: Show Output
