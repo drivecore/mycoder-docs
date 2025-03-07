@@ -23,14 +23,6 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Disable dark mode
-  themeConfig: {
-    colorMode: {
-      disableSwitch: true,
-      defaultMode: 'light',
-    },
-  },
-
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -109,6 +101,10 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+      disableSwitch: true,
+      defaultMode: 'light',
+    },
     navbar: {
       title: 'MyCoder Docs',
       items: [
