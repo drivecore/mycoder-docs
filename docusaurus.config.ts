@@ -79,15 +79,30 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      'docusaurus-plugin-sentry',
+      {
+        DSN: 'https://c928d425f7cf44cab41620de8f31fe57@o4508898407481344.ingest.us.sentry.io/4508935235698688',
+        allEnvironments: false, // Only enable in production
+        configuration: {
+          script: {
+            defer: true,
+          },
+        }
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    gtag: {
+      trackingID: 'G-4G4NJBHVNF',
+      anonymizeIP: true,
+    },
     navbar: {
       title: 'MyCoder Docs',
-      logo: {
-        alt: 'MyCoder Logo',
-        src: 'img/logo.svg',
-      },
       items: [
         {
           type: 'docSidebar',
