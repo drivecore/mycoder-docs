@@ -3,6 +3,11 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
+// Import SVG images
+import MountainSvg from '@site/static/img/undraw_docusaurus_mountain.svg';
+import TreeSvg from '@site/static/img/undraw_docusaurus_tree.svg';
+import ReactSvg from '@site/static/img/undraw_docusaurus_react.svg';
+
 type FeatureItem = {
   title: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
@@ -12,7 +17,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'AI-Powered Coding Assistant',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: MountainSvg,
     description: (
       <>
         MyCoder leverages advanced AI models to understand your requirements
@@ -22,7 +27,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Context-Aware Responses',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: TreeSvg,
     description: (
       <>
         MyCoder understands your project structure and existing code, providing
@@ -32,7 +37,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Built for Developers',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: ReactSvg,
     description: (
       <>
         Designed with developer workflows in mind, MyCoder integrates with your

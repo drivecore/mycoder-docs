@@ -45,7 +45,7 @@ function HomepageQuickStart() {
                 # Install MyCoder globally<br />
                 npm install -g mycoder<br /><br />
                 # Use MyCoder with a prompt<br />
-                mycoder "Create a React component that displays a counter"
+                mycoder &quot;Create a React component that displays a counter&quot;
               </code>
             </pre>
           </div>
