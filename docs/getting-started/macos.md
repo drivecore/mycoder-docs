@@ -12,14 +12,11 @@ This guide will help you set up MyCoder on macOS.
    
    Homebrew makes it easy to install and manage development tools on macOS. Installing it first will simplify the rest of the setup process.
    
+   Visit [brew.sh](https://brew.sh/) and follow the official installation instructions.
+   
+   After installation, verify that Homebrew is working:
+   
    ```bash
-   # Install Homebrew
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   
-   # Make sure Homebrew is in your PATH
-   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-   eval "$(/opt/homebrew/bin/brew shellenv)"
-   
    # Verify installation
    brew --version
    ```
@@ -35,18 +32,13 @@ This guide will help you set up MyCoder on macOS.
    ```bash
    # Install NVM using Homebrew
    brew install nvm
+   ```
    
-   # Create NVM directory
-   mkdir ~/.nvm
+   Follow the shell setup instructions provided by the NVM Homebrew installation output.
    
-   # Add NVM configuration to your shell profile
-   echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
-   echo '[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh"' >> ~/.zshrc
-   echo '[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"' >> ~/.zshrc
+   After completing the shell setup:
    
-   # Reload shell configuration
-   source ~/.zshrc
-   
+   ```bash
    # Install latest LTS version of Node.js
    nvm install --lts
    

@@ -14,14 +14,14 @@ This guide will help you set up MyCoder on Windows.
    
    **Recommended: Using NVM for Windows (Node Version Manager)**
    
-   NVM for Windows is the preferred way to install Node.js as it allows for easy version management:
+   NVM for Windows is the preferred way to install Node.js as it allows for easy version management.
+   
+   Visit [NVM for Windows releases](https://github.com/coreybutler/nvm-windows/releases) and download the latest nvm-setup.exe file.
+   
+   After installation:
    
    ```
-   # Download and install NVM for Windows
-   # Visit: https://github.com/coreybutler/nvm-windows/releases
-   # Download the nvm-setup.exe file from the latest release
-   
-   # After installation, open a new Command Prompt and install Node.js
+   # Open a new Command Prompt and install Node.js
    nvm install lts
    
    # Set it as default
