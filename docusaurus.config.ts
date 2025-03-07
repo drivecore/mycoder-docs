@@ -109,7 +109,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Documentation',
+          label: 'Intro',
         },
         {
           to: '/docs/getting-started/',
@@ -119,6 +119,11 @@ const config: Config = {
         {
           to: '/docs/usage/',
           label: 'Usage',
+          position: 'left'
+        },
+        {
+          to: '/docs/examples/',
+          label: 'Examples',
           position: 'left'
         },
         {to: '/blog', label: 'Blog', position: 'left'},
