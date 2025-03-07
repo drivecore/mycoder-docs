@@ -56,6 +56,20 @@ This guide will help you set up MyCoder on Windows.
    - Manage GitHub workflows
    
    This is especially useful if you plan to contribute to MyCoder or related projects.
+   
+   **Enable GitHub Mode in MyCoder**:
+   
+   After installing the GitHub CLI, enable GitHub mode in MyCoder for enhanced GitHub integration:
+   
+   ```
+   # Enable GitHub mode
+   mycoder config set githubMode true
+   
+   # Verify configuration
+   mycoder config get githubMode
+   ```
+   
+   With GitHub mode enabled, MyCoder can create issues, branches, and pull requests directly through the GitHub CLI.
 
 ## Installation
 
