@@ -2,7 +2,7 @@
 title: GitHub Mode as a Productivity Multiplier
 shortTitle: GitHub Mode Productivity
 date: 2025-03-07
-authors: [mycoder_team]
+authors: [ben]
 tags: [github, productivity, workflow]
 ---
 
