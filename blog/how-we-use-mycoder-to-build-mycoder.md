@@ -2,11 +2,13 @@
 title: How We Use MyCoder to Build MyCoder - A Self-Improving AI Tool
 shortTitle: MyCoder Building MyCoder
 date: 2025-03-05
-author: Ben Houston
-excerpt: Discover how the MyCoder team uses the tool itself to accelerate development, implement features, fix bugs, and improve documentation - a case study in AI-assisted development.
-topics: ai, programming, development, tools, case-study
-readTimeMinutes: 8
+authors: [ben]
+tags: [ai, programming, development, tools, case-study]
 ---
+
+At DriveCore, we've embraced a powerful development approach: using MyCoder to build and improve MyCoder itself. This recursive development process has accelerated our workflow and provided unique insights into AI-assisted programming.
+
+<!-- truncate -->
 
 One of the most compelling demonstrations of MyCoder's capabilities is how we use it to improve itself. This recursive development approach not only showcases the tool's practical applications but also helps us identify improvement opportunities from a user's perspective.
 

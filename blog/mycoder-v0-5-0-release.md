@@ -2,13 +2,13 @@
 title: MyCoder v0.5.0 - Multi-Provider Support, Configuration System, and More
 shortTitle: MyCoder v0.5.0 Release
 date: 2025-03-05
-author: Ben Houston
-excerpt: MyCoder 0.5.0 introduces support for multiple AI providers, a persistent configuration system, GitHub integration, custom prompts, and performance profiling.
-topics: ai, programming, development, tools
-readTimeMinutes: 5
+authors: [ben]
+tags: [ai, programming, development, tools]
 ---
 
 We're excited to announce the release of MyCoder v0.5.0, our biggest update yet to the AI-powered coding assistant. This release brings several major enhancements that make MyCoder more flexible, customizable, and powerful than ever before.
+
+<!-- truncate -->
 
 ## Multi-Provider Support
 

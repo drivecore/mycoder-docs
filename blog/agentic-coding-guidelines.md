@@ -2,11 +2,13 @@
 title: Best Practices for Efficient Agentic Coding
 subTitle: Agentic Coding Best Practices
 date: 2025-03-06
-author: Ben Houston
-excerpt: Learn practical guidelines for organizing your codebase to optimize efficiency when working with AI coding assistants.
-topics: ai, coding
-readTime: 8
+authors: [ben]
+tags: [ai, coding]
 ---
+
+As AI coding assistants become more capable, developers are discovering new workflows that maximize their effectiveness. This post outlines best practices for organizing your codebase to work efficiently with AI agents like MyCoder.
+
+<!-- truncate -->
 
 As AI-based coding agents like [mycoder.ai](https://mycoder.ai) become increasingly capable, adopting structured, clear, and AI-friendly coding practices will enhance efficiency for both humans and AI agents. Here are ten best practices for efficient agentic coding:
 
