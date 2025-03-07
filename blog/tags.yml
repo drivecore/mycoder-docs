@@ -17,3 +17,33 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+ai:
+  label: AI
+  permalink: /ai
+  description: Artificial Intelligence related content
+
+coding:
+  label: Coding
+  permalink: /coding
+  description: Content related to coding practices and techniques
+
+programming:
+  label: Programming
+  permalink: /programming
+  description: Programming concepts, languages, and methodologies
+
+development:
+  label: Development
+  permalink: /development
+  description: Software development processes and tools
+
+tools:
+  label: Tools
+  permalink: /tools
+  description: Software tools and utilities for developers
+
+case-study:
+  label: Case Study
+  permalink: /case-study
+  description: Real-world examples and case studies
