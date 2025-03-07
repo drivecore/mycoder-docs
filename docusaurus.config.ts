@@ -113,12 +113,12 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          to: '/docs/getting-started',
+          to: '/docs/getting-started/',
           label: 'Getting Started',
           position: 'left',
         },
         {
-          to: '/docs/usage',
+          to: '/docs/usage/',
           label: 'Usage',
           position: 'left'
         },
