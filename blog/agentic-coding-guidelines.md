@@ -103,7 +103,7 @@ export const userRoute = createRoute({
 });
 ```
 
-## 5. Consolidate Linting and Formatting at Root Level
+## 6. Consolidate Linting and Formatting at Root Level
 
 Centralize linting and formatting configurations at the monorepo root to ensure consistency.
 
@@ -116,7 +116,7 @@ Centralize linting and formatting configurations at the monorepo root to ensure 
 }
 ```
 
-## 6. Avoid Overly Interdependent Configuration Systems
+## 7. Avoid Overly Interdependent Configuration Systems
 
 Favor self-contained, independent configuration files per package rather than complex inheritance:
 
@@ -131,7 +131,7 @@ root/
       tsconfig.json
 ```
 
-## 7. Type-Driven Development
+## 8. Type-Driven Development
 
 Use comprehensive, precise types to enforce correctness at compile-time rather than relying on runtime validation.
 
@@ -145,7 +145,7 @@ type User = {
 };
 ```
 
-## 8. Consistent, Predictable File Organization
+## 9. Consistent, Predictable File Organization
 
 Maintain consistent file structures for components:
 
@@ -158,7 +158,7 @@ components/
     index.ts
 ```
 
-## 9. Test-Case Driven Documentation
+## 10. Test-Case Driven Documentation
 
 Write clear, self-explanatory tests that also serve as documentation:
 
