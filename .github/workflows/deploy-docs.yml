@@ -8,7 +8,7 @@ on:
 
 env:
   REGION: us-central1
-  REGISTRY: us-central1-docker.pkg.dev
+  GAR_HOSTNAME: us-central1-docker.pkg.dev
   PROJECT_ID: drivecore-primary
   SERVICE_NAME: mycoder-docs
 
@@ -35,10 +35,10 @@ jobs:
 
       - name: Configure Docker for GCP
         run: |
-          gcloud auth configure-docker $REGISTRY --quiet
+          gcloud auth configure-docker $GAR_HOSTNAME --quiet
 
       - name: Set image path
-        run: echo "IMAGE_PATH=$REGISTRY/$PROJECT_ID/shared-docker-registry/$SERVICE_NAME:${{ github.sha }}" >> $GITHUB_ENV
+        run: echo "IMAGE_PATH=$GAR_HOSTNAME/$PROJECT_ID/shared-docker-registry/$SERVICE_NAME:${{ github.sha }}" >> $GITHUB_ENV
 
       - name: Build and push Docker container
         run: |
