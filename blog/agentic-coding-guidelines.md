@@ -144,29 +144,6 @@ src/
     validation.ts
 ```
 
-## 6. Consolidate Linting and Formatting at the Root Level
-
-Define linting and formatting configurations once at the root level to ensure consistency and simplify maintenance.
-
-## 7. Prefer Compile-Time Validation Over Runtime Checks
-
-Leverage compile-time validation by defining robust type systems, rather than relying heavily on runtime checks. Example:
-
-```typescript
-type AdminUser = { kind: 'admin'; id: string; permissions: string[] };
-type RegularUser = { kind: 'regular'; id: string };
-
-type User = AdminUser | RegularUser;
-
-function handleUser(user: User) {
-  if (user.kind === 'admin') {
-    // Admin logic
-  } else {
-    // regular user logic
-  }
-}
-```
-
 ## 7. Type-Driven Development
 
 Use comprehensive, precise types to enforce correctness at compile-time rather than relying on runtime validation.
