@@ -116,7 +116,7 @@ Centralize linting and formatting configurations at the monorepo root to ensure 
 }
 ```
 
-## 5. Avoid Overly Interdependent Configuration Systems
+## 6. Avoid Overly Interdependent Configuration Systems
 
 Favor self-contained, independent configuration files per package rather than complex inheritance:
 
@@ -129,19 +129,6 @@ root/
       tsconfig.json
     shared/
       tsconfig.json
-```
-
-## 6. Simplify Project Structure
-
-Maintain flat, meaningful directory structures to reduce cognitive load for AI and humans:
-
-```
-src/
-  auth/
-    LoginForm.tsx
-    SignupForm.tsx
-    useAuth.ts
-    validation.ts
 ```
 
 ## 7. Type-Driven Development
@@ -158,20 +145,7 @@ type User = {
 };
 ```
 
-## 8. Simplify Project Structure
-
-Avoid unnecessary deep nesting to streamline AI navigation:
-
-Preferred:
-
-```
-src/
-  user/
-    UserProfile.tsx
-    UserForm.tsx
-```
-
-## 9. Consistent, Predictable File Organization
+## 8. Consistent, Predictable File Organization
 
 Maintain consistent file structures for components:
 
@@ -184,19 +158,7 @@ components/
     index.ts
 ```
 
-## 9. Prefer Compile-Time Validation
-
-Use tools like TypeScript to catch issues at compile-time rather than relying solely on runtime checks:
-
-```typescript
-// Type-safe route definition
-export const route = createRoute({
-  path: '/users',
-  handler: async (req) => json(await handleRequest(req)),
-});
-```
-
-## 10. Test-Case Driven Documentation
+## 9. Test-Case Driven Documentation
 
 Write clear, self-explanatory tests that also serve as documentation:
 
