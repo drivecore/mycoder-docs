@@ -1,4 +1,2 @@
-#!/usr/bin/env sh
-
 echo "Running pre-commit checks..."
 pnpm pre-commit-check
