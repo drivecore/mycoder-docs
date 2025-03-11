@@ -90,11 +90,17 @@ npx mycoder "Your prompt here"
 ### Setting up API keys
 
 1. **Temporary Environment Variables**:
+
+   From the command prompt (CMD):
    ```
    set ANTHROPIC_API_KEY=your-api-key
    ```
-
-2. **Persistent Environment Variables**:
+   In a PowerShell session:
+   ```
+   $env:ANTHROPIC_API_KEY="your-api-key"
+   ```
+   
+3. **Persistent Environment Variables**:
    - Right-click on "This PC" or "My Computer"
    - Select "Properties"
    - Click "Advanced system settings"
@@ -102,7 +108,7 @@ npx mycoder "Your prompt here"
    - Under "User variables", click "New"
    - Add your API key (e.g., ANTHROPIC_API_KEY as variable name)
 
-3. **Using .env File**:
+4. **Using .env File**:
    - Create a file named `.env` in your project directory
    - Add your API key: `ANTHROPIC_API_KEY=your-api-key`
 
