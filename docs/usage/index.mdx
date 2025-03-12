@@ -46,45 +46,62 @@ mycoder --file=my-task-description.txt
 | `--userSession`     | Use user's existing browser session instead of sandboxed session (default: false) |
 | `--pageFilter`      | Method to process webpage content (simple, none, readability)                     |
 | `--profile`         | Enable performance profiling of CLI startup                                       |
-| `--modelProvider`   | Specify the AI model provider to use (anthropic, openai, mistral, xai, ollama)    |
-| `--modelName`       | Specify the model name to use with the selected provider                          |
+| `--provider`        | Specify the AI model provider to use (anthropic, openai, mistral, xai, ollama)    |
+| `--model`           | Specify the model name to use with the selected provider                          |
 | `-h, --help`        | Show help                                                                         |
 | `-V, --version`     | Show version number                                                               |
 
-## Configuration Management
+## Configuration
 
 MyCoder provides a configuration system that allows you to set default values for various options. This saves you from having to specify the same options repeatedly on the command line.
 
-### Configuration Commands
+Configuration is managed through a `mycoder.config.js` file in your project root:
 
-| Command                            | Description                        |
-| ---------------------------------- | ---------------------------------- |
-| `mycoder config list`              | List all configuration values      |
-| `mycoder config get [key]`         | Get a specific configuration value |
-| `mycoder config set [key] [value]` | Set a configuration value          |
+```javascript
+// mycoder.config.js
+export default {
+  // GitHub integration
+  githubMode: true,
+
+  // Browser settings
+  headless: false,
+  userSession: false,
+  pageFilter: 'readability',
+
+  // Model settings
+  provider: 'anthropic',
+  model: 'claude-3-7-sonnet-20250219',
+
+  // Custom settings
+  customPrompt: 'Always use TypeScript when writing code. Prefer functional programming patterns when possible.',
+};
+```
 
 ### Available Configuration Options
 
-| Option          | Description                                        | Example                                                   |
-| --------------- | -------------------------------------------------- | --------------------------------------------------------- |
-| `logLevel`      | Default logging level                              | `mycoder config set logLevel verbose`                     |
-| `tokenUsage`    | Show token usage by default                        | `mycoder config set tokenUsage true`                      |
-| `headless`      | Use browser in headless mode                       | `mycoder config set headless false`                       |
-| `userSession`   | Use existing browser session                       | `mycoder config set userSession true`                     |
-| `pageFilter`    | Default webpage content processing method          | `mycoder config set pageFilter readability`               |
-| `modelProvider` | Default AI model provider                          | `mycoder config set modelProvider openai`                 |
-| `modelName`     | Default model name                                 | `mycoder config set modelName gpt-4o`                     |
-| `customPrompt`  | Custom instructions to append to the system prompt | `mycoder config set customPrompt "Always use TypeScript"` |
-| `githubMode`    | Enable GitHub integration mode                     | `mycoder config set githubMode true`                      |
-| `profile`       | Enable performance profiling                       | `mycoder config set profile true`                         |
+| Option          | Description                                        | Example in mycoder.config.js                           |
+| --------------- | -------------------------------------------------- | ------------------------------------------------------ |
+| `logLevel`      | Default logging level                              | `logLevel: 'verbose'`                                  |
+| `tokenUsage`    | Show token usage by default                        | `tokenUsage: true`                                     |
+| `headless`      | Use browser in headless mode                       | `headless: false`                                      |
+| `userSession`   | Use existing browser session                       | `userSession: true`                                    |
+| `pageFilter`    | Default webpage content processing method          | `pageFilter: 'readability'`                            |
+| `provider`      | Default AI model provider                          | `provider: 'openai'`                                   |
+| `model`         | Default model name                                 | `model: 'gpt-4o'`                                      |
+| `customPrompt`  | Custom instructions to append to the system prompt | `customPrompt: "Always use TypeScript"`                |
+| `githubMode`    | Enable GitHub integration mode                     | `githubMode: true`                                     |
+| `profile`       | Enable performance profiling                       | `profile: true`                                        |
 
 ## Custom Prompt
 
 The `customPrompt` configuration option allows you to append custom instructions to the system prompt used by MyCoder. This can be useful for guiding the AI's behavior for your specific use cases:
 
-```bash
-# Example: Set a custom prompt to prefer TypeScript
-mycoder config set customPrompt "Always use TypeScript when writing code. Prefer functional programming patterns when possible."
+```javascript
+// mycoder.config.js
+export default {
+  // Example: Set a custom prompt to prefer TypeScript
+  customPrompt: "Always use TypeScript when writing code. Prefer functional programming patterns when possible.",
+};
 ```
 
 The custom prompt will be included in both the main agent and any sub-agents that are created.
@@ -100,8 +117,17 @@ MyCoder supports GitHub integration through the `githubMode` configuration optio
 
 To enable GitHub mode:
 
+```javascript
+// mycoder.config.js
+export default {
+  githubMode: true,
+};
+```
+
+You can also enable it for a single session:
+
 ```bash
-mycoder config set githubMode true
+mycoder --githubMode true "Fix the bug in issue #42"
 ```
 
 This requires the GitHub CLI (`gh`) to be installed and authenticated. For more details, see the [GitHub Mode documentation](./github-mode).

@@ -90,14 +90,19 @@ This guide will help you set up MyCoder on macOS.
    
    **Enable GitHub Mode in MyCoder**:
    
-   After installing the GitHub CLI, enable GitHub mode in MyCoder for enhanced GitHub integration:
+   After installing the GitHub CLI, enable GitHub mode in MyCoder for enhanced GitHub integration by creating a configuration file:
+   
+   ```javascript
+   // mycoder.config.js
+   export default {
+     githubMode: true,
+   };
+   ```
+   
+   Or by using the CLI option for a single session:
    
    ```bash
-   # Enable GitHub mode
-   mycoder config set githubMode true
-   
-   # Verify configuration
-   mycoder config get githubMode
+   mycoder --githubMode true "Your prompt here"
    ```
    
    With GitHub mode enabled, MyCoder can create issues, branches, and pull requests directly through the GitHub CLI.

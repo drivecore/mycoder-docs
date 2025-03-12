@@ -8,35 +8,55 @@ MyCoder provides a comprehensive configuration system that allows you to customi
 
 ## Using the Configuration System
 
-MyCoder's configuration is managed through a simple command-line interface:
+MyCoder is configured using a `mycoder.config.js` file in your project root, similar to ESLint and other modern JavaScript tools. This file exports a configuration object with your preferred settings.
 
-```bash
-# List all configuration values
-mycoder config list
+```javascript
+// mycoder.config.js
+export default {
+  // GitHub integration
+  githubMode: true,
 
-# Get a specific configuration value
-mycoder config get modelProvider
+  // Browser settings
+  headless: true,
+  userSession: false,
+  pageFilter: 'none', // 'simple', 'none', or 'readability'
 
-# Set a configuration value
-mycoder config set modelProvider openai
+  // Model settings
+  provider: 'anthropic',
+  model: 'claude-3-7-sonnet-20250219',
+  maxTokens: 4096,
+  temperature: 0.7,
+
+  // Custom settings
+  customPrompt: '',
+  profile: false,
+  tokenCache: true,
+};
 ```
 
-Configuration values are stored persistently and will be used for all future MyCoder sessions until changed.
+MyCoder will search for configuration in the following places (in order of precedence):
+
+1. CLI options (e.g., `--githubMode true`)
+2. Configuration file (`mycoder.config.js`)
+3. Default values
 
 ## Available Configuration Options
 
 ### AI Model Selection
 
-| Option          | Description                 | Possible Values                                   | Default     |
-| --------------- | --------------------------- | ------------------------------------------------- | ----------- |
-| `modelProvider` | The AI provider to use      | `anthropic`, `openai`, `mistral`, `xai`, `ollama` | `anthropic` |
-| `modelName`     | The specific model to use   | Depends on provider                               | `claude-3-opus-20240229` |
+| Option     | Description             | Possible Values                                   | Default     |
+| ---------- | ----------------------- | ------------------------------------------------- | ----------- |
+| `provider` | The AI provider to use  | `anthropic`, `openai`, `mistral`, `xai`, `ollama` | `anthropic` |
+| `model`    | The specific model to use | Depends on provider                             | `claude-3-7-sonnet-20250219` |
 
 Example:
-```bash
-# Set OpenAI as the provider with GPT-4o model
-mycoder config set modelProvider openai
-mycoder config set modelName gpt-4o
+```javascript
+// mycoder.config.js
+export default {
+  // Use OpenAI as the provider with GPT-4o model
+  provider: 'openai',
+  model: 'gpt-4o',
+};
 ```
 
 ### Logging and Debugging
@@ -48,10 +68,13 @@ mycoder config set modelName gpt-4o
 | `profile`    | Enable performance profiling    | `true`, `false`                            | `false` |
 
 Example:
-```bash
-# Enable verbose logging and token usage reporting
-mycoder config set logLevel verbose
-mycoder config set tokenUsage true
+```javascript
+// mycoder.config.js
+export default {
+  // Enable verbose logging and token usage reporting
+  logLevel: 'verbose',
+  tokenUsage: true,
+};
 ```
 
 ### Browser Integration
@@ -63,10 +86,13 @@ mycoder config set tokenUsage true
 | `pageFilter`  | Method to process webpage content | `simple`, `none`, `readability`    | `simple` |
 
 Example:
-```bash
-# Show browser windows and use readability for better web content parsing
-mycoder config set headless false
-mycoder config set pageFilter readability
+```javascript
+// mycoder.config.js
+export default {
+  // Show browser windows and use readability for better web content parsing
+  headless: false,
+  pageFilter: 'readability',
+};
 ```
 
 ### Behavior Customization
@@ -77,22 +103,20 @@ mycoder config set pageFilter readability
 | `githubMode`   | Enable GitHub integration                          | `true`, `false`     | `false` |
 
 Example:
-```bash
-# Set a custom prompt to guide the AI's behavior
-mycoder config set customPrompt "Always write TypeScript code with proper type annotations. Prefer functional programming patterns where appropriate."
-
-# Enable GitHub integration
-mycoder config set githubMode true
+```javascript
+// mycoder.config.js
+export default {
+  // Set a custom prompt to guide the AI's behavior
+  customPrompt: "Always write TypeScript code with proper type annotations. Prefer functional programming patterns where appropriate.",
+  
+  // Enable GitHub integration
+  githubMode: true,
+};
 ```
 
 ## Configuration File Location
 
-MyCoder stores its configuration in a JSON file in your user directory:
-
-- On macOS/Linux: `~/.config/mycoder/config.json`
-- On Windows: `%APPDATA%\mycoder\config.json`
-
-While you can edit this file directly, it's recommended to use the `mycoder config` commands to ensure proper formatting.
+The `mycoder.config.js` file should be placed in the root directory of your project. MyCoder will automatically detect and use this file when run from within the project directory or any of its subdirectories.
 
 ## Overriding Configuration
 
@@ -100,18 +124,47 @@ Command-line arguments always override the stored configuration. For example:
 
 ```bash
 # Use a different model provider just for this session
-mycoder --modelProvider openai "Create a React component"
+mycoder --provider openai "Create a React component"
 ```
 
 This will use OpenAI for this session only, without changing your stored configuration.
 
-## Resetting Configuration
+## Configuration Examples
 
-To reset a specific configuration value to its default:
+### Basic Configuration
 
-```bash
-# Remove a specific configuration value
-mycoder config set modelProvider ""
+```javascript
+// mycoder.config.js
+export default {
+  provider: 'anthropic',
+  model: 'claude-3-7-sonnet-20250219',
+  githubMode: false,
+};
 ```
 
-To reset all configuration to defaults, you can delete the configuration file and restart MyCoder.
+### Advanced Configuration
+
+```javascript
+// mycoder.config.js
+export default {
+  // Model settings
+  provider: 'anthropic',
+  model: 'claude-3-7-sonnet-20250219',
+  maxTokens: 4096,
+  temperature: 0.7,
+  
+  // Browser settings
+  headless: false,
+  userSession: true,
+  pageFilter: 'readability',
+  
+  // GitHub integration
+  githubMode: true,
+  
+  // Custom settings
+  customPrompt: 'Always prioritize readability and simplicity in your code. Prefer TypeScript over JavaScript when possible.',
+  profile: true,
+  tokenUsage: true,
+  tokenCache: true,
+};
+```

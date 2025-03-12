@@ -66,17 +66,20 @@ MyCoder supports multiple AI providers:
 | xAI/Grok   | `XAI_API_KEY`        | grok-1                               |
 | Ollama     | N/A (local)          | Various local models                 |
 
-You can specify which provider and model to use with the `--modelProvider` and `--modelName` options:
+You can specify which provider and model to use with the `--provider` and `--model` options:
 
 ```bash
-mycoder --modelProvider openai --modelName gpt-4o "Your prompt here"
+mycoder --provider openai --model gpt-4o "Your prompt here"
 ```
 
-Or set them as defaults in your configuration:
+Or set them as defaults in your configuration file:
 
-```bash
-mycoder config set modelProvider openai
-mycoder config set modelName gpt-4o
+```javascript
+// mycoder.config.js
+export default {
+  provider: 'openai',
+  model: 'gpt-4o',
+};
 ```
 
 ## Next Steps
