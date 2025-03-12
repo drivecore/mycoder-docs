@@ -14,7 +14,7 @@ Currently available as a research preview, MyCoder is built to work alongside de
 
 ## Key Features
 
-- **AI-Powered**: Supports multiple AI providers including Anthropic, OpenAI, Mistral AI, xAI/Grok, and Ollama
+- **AI-Powered**: Supports multiple AI providers including Anthropic, OpenAI, and Ollama
 - **Extensible Tool System**: Includes tools for file operations, shell commands, web browsing, and more
 - **Parallel Execution**: Can spawn sub-agents to work on different parts of a task simultaneously
 - **Self-Modification**: Capable of modifying code, including its own codebase

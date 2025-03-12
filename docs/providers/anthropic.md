@@ -58,6 +58,25 @@ Anthropic offers several Claude models with different capabilities and price poi
 - Claude models have a 200K token context window, allowing for large codebases to be processed
 - For cost-sensitive applications, consider using Claude Haiku for simpler tasks
 
+## Token Caching
+
+MyCoder implements token caching for Anthropic's Claude models to optimize performance and reduce API costs:
+
+- Token caching stores and reuses parts of the conversation history
+- The Anthropic provider uses Claude's native cache control mechanisms
+- This significantly reduces token usage for repeated or similar queries
+- Cache efficiency is automatically optimized based on conversation context
+
+You can enable or disable token caching in your configuration:
+
+```javascript
+export default {
+  provider: 'anthropic',
+  model: 'claude-3-7-sonnet-20250219',
+  tokenCache: true, // Enable token caching (default is true)
+};
+```
+
 ## Troubleshooting
 
 If you encounter issues with Anthropic's Claude:
