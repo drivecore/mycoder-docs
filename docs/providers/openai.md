@@ -51,12 +51,14 @@ export default {
 
 ## Supported Models
 
-OpenAI offers several models with different capabilities:
+MyCoder supports all OpenAI models that have tool/function calling capabilities. Here are some recommended models:
 
 - `gpt-4o` (recommended) - Latest model with strong reasoning and tool-calling capabilities
 - `gpt-4-turbo` - Strong performance with 128K context window
 - `gpt-4` - Original GPT-4 model with 8K context window
 - `gpt-3.5-turbo` - More affordable option for simpler tasks
+
+You can use any other OpenAI model that supports function calling with MyCoder. The OpenAI provider is not limited to just these listed models.
 
 ## Best Practices
 
