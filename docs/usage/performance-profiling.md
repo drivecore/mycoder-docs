@@ -24,10 +24,13 @@ mycoder --profile --interactive
 
 ### 2. As Default Behavior
 
-Set profiling as the default behavior using the configuration system:
+Set profiling as the default behavior in your configuration file:
 
-```bash
-mycoder config set profile true
+```javascript
+// mycoder.config.js
+export default {
+  profile: true,
+};
 ```
 
 ## Understanding Profiling Output

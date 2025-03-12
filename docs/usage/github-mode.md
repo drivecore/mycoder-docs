@@ -30,16 +30,19 @@ Before using GitHub mode, you need:
 
 ## Enabling GitHub Mode
 
-Enable GitHub mode using the configuration system:
+Enable GitHub mode using the configuration file:
 
-```bash
-mycoder config set githubMode true
+```javascript
+// mycoder.config.js
+export default {
+  githubMode: true,
+};
 ```
 
 Or use it for a single session:
 
 ```bash
-mycoder --githubMode "Fix the bug described in issue #42"
+mycoder --githubMode true "Fix the bug described in issue #42"
 ```
 
 ## GitHub Mode Features
